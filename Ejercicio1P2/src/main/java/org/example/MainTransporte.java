@@ -58,9 +58,40 @@ public class MainTransporte {
 
         scanner.close();
     }
-
     private void crearPropietarioYVehiculoCarga(Scanner scanner) {
-        // Implementación para crear propietario y vehículo de carga
+        // Solicitar datos del propietario
+        System.out.println("Ingrese el nombre del propietario:");
+        String nombrePropietario = scanner.next();
+        System.out.println("Ingrese la edad del propietario:");
+        int edadPropietario = scanner.nextInt();
+    
+        // Crear el propietario
+        Propietario propietario = new Propietario(nombrePropietario, nombrePropietario, nombrePropietario, nombrePropietario, edadPropietario){
+
+
+        System.out.println("Ingrese la placa del vehículo de carga:");
+        String placa = scanner.next();
+        System.out.println("Ingrese el modelo del vehículo de carga:");
+        String modelo = scanner.next();
+        System.out.println("Ingrese la marca del vehículo de carga:");
+        String marca = scanner.next();
+        System.out.println("Ingrese el color del vehículo de carga:");
+        String color = scanner.next();
+        System.out.println("Ingrese la capacidad de carga del vehículo de carga (en kg):");
+        double capacidadCarga = scanner.nextDouble();
+        System.out.println("Ingrese el número de ejes del vehículo de carga:");
+        int numeroEjes = scanner.nextInt();
+    
+        VehiculoCarga vehiculoCarga = new VehiculoCarga(placa, modelo, marca, color, capacidadCarga, numeroEjes);
+    
+
+        propietario.agregarVehiculo(vehiculoCarga);
+    
+
+        empresa.agregarPropietario(propietario);
+    
+        System.out.println("Propietario y vehículo de carga creados exitosamente.");
+
     }
 
     private void calcularTotalPasajeros(Scanner scanner) {
