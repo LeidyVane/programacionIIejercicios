@@ -2,11 +2,14 @@ package org.example;
 
 import java.util.Scanner;
 
-public class MenuTransporte {
+public class MainTransporte {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Crear un Propietario y su Vehículo de carga
+        /*
+         * se crea un Propietario con sus datos personales
+         *
+         */
         System.out.println("Ingrese el nombre del propietario:");
         String nombre = scanner.nextLine();
         System.out.println("Ingrese la identificación del propietario:");
@@ -17,6 +20,10 @@ public class MenuTransporte {
         String celular = scanner.nextLine();
 
         Propietario propietario = new Propietario(nombre, identificacion, email, celular);
+
+        /*
+         *  añadimos el vehículo de carga
+         */
 
         System.out.println("Ingrese la placa del vehículo:");
         String placa = scanner.nextLine();
@@ -37,10 +44,12 @@ public class MenuTransporte {
         System.out.println("\nDatos del Propietario y su Vehículo:");
         System.out.println(propietario);
 
-        // Calcular el total de pasajeros transportados en un día
-        VehiculoTransporte vehiculo1 = new VehiculoTransporte("ABC123", "2020", "Toyota", "Blanco", 50);
-        VehiculoTransporte vehiculo2 = new VehiculoTransporte("XYZ789", "2019", "Nissan", "Negro", 45);
-        VehiculoTransporte vehiculo3 = new VehiculoTransporte("LMN456", "2021", "Ford", "Azul", 60);
+        /**
+         * Calculamos el total de pasajeros transportados en un día
+         */
+        VehiculoTransporte vehiculo1 = new VehiculoTransporte("Ck456", "2020", "Toyota", "Blanco", 50);
+        VehiculoTransporte vehiculo2 = new VehiculoTransporte("XT67", "2019", "Nissan", "Negro", 45);
+        VehiculoTransporte vehiculo3 = new VehiculoTransporte("LG49", "2021", "Ford", "Azul", 60);
 
         System.out.println("\nIngrese la placa del vehículo de pasajeros para calcular el total de pasajeros transportados:");
         scanner.nextLine();  // Consumir la nueva línea
