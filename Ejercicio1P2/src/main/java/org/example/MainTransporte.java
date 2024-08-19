@@ -132,11 +132,11 @@ public class MainTransporte {
         System.out.println("Total de pasajeros transportados por el vehículo con placa " + placa + ": " + totalPasajeros);
     }
 
-    private void obtenerListaUsuariosPorPeso(Scanner scanner) {
+    private void obtenerListaUsuariosPorPeso() {
         // Implementación para obtener la lista de usuarios que superan un peso
     }
 
-    private void obtenerNumeroUsuariosPorVehiculo(Scanner scanner) {
+    private void obtenerNumeroUsuariosPorVehiculo() {
         // Implementación para obtener el número de usuarios movilizados en un vehículo
     }
 
@@ -144,9 +144,9 @@ public class MainTransporte {
         // Implementación para obtener el número de propietarios mayores de 40 años
     }
 
-    private void contarUsuariosEnRangoDeEdad(Scanner scanner) {
+    private void contarUsuariosEnRangoDeEdad() {
         // Implementación para contar usuarios en un rango de edad
     }
 }
-}
+
 
