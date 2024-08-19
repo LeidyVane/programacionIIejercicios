@@ -20,7 +20,7 @@ public class Main {
     }
 
     /*
-    /* Método para inicializar datos de prueba
+    /* Método para inicializar datos de prueba 1
      */
     public static void inicializarDatos() {
         Empresa empresa = new Empresa("Movilidad SA");
