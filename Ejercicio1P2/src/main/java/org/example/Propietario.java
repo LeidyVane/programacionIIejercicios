@@ -9,19 +9,42 @@ public class Propietario {
     private String email;
     private String celular;
     private List<Vehiculo> listaVehiculosAsociados;
+    private int edad;
 
-    public Propietario(String nombre, String identificacion, String email, String celular) {
+    public Propietario(String nombre, String identificacion, String email, String celular, int edad) {
         this.nombre = nombre;
         this.identificacion = identificacion;
         this.email = email;
         this.celular = celular;
         this.listaVehiculosAsociados = new ArrayList<>();
+        this.edad=edad;
     }
-
+// Getters y setters
     public void asociarVehiculo(Vehiculo vehiculo) {
         listaVehiculosAsociados.add(vehiculo);
         vehiculo.getListaPropietariosAsociados().add(this);
     }
 
-    // Getters y setters
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getIdentificacion() {
+        return identificacion;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getCelular() {
+        return celular;
+    }
+
+    public List<Vehiculo> getListaVehiculosAsociados() {
+        return listaVehiculosAsociados;
+    }
+    public i
+
+    
 }

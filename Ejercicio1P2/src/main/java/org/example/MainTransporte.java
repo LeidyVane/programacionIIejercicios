@@ -2,8 +2,12 @@ package org.example;
 
 import java.util.Scanner;
 
+/* 
+ * 
+ */
+
 public class MainTransporte {
-    private Empresa empresa;
+    private Empresa empresa; 
 
     public MainTransporte(Empresa empresa) {
         this.empresa = empresa;

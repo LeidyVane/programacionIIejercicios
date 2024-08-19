@@ -8,6 +8,7 @@ public abstract class Vehiculo {
     private String modelo;
     private String marca;
     private String color;
+    private double peso;
     private List<Propietario> listaPropietariosAsociados;
 
     public Vehiculo(String placa, String modelo, String marca, String color) {
@@ -15,6 +16,7 @@ public abstract class Vehiculo {
         this.modelo = modelo;
         this.marca = marca;
         this.color = color;
+        this.peso = peso;
         this.listaPropietariosAsociados = new ArrayList<>();
     }
 

@@ -13,7 +13,7 @@ public class Main {
 
     public static void inicializarDatos(Empresa empresa) {
         // Crear propietarios, vehículos y asociarlos
-        Propietario propietario1 = new Propietario("Juan Pérez", "12345678", "juan@example.com", "555-1234");
+        Propietario propietario1 = new Propietario("Pepito Pérez", "12345678", "juan@example.com", "555-1234", 21);
         VehiculoCarga vehiculo1 = new VehiculoCarga("ABC123", "ModeloX", "MarcaY", "Rojo", 1500.0, 2);
         propietario1.asociarVehiculo(vehiculo1);
 
