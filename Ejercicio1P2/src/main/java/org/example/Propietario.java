@@ -44,7 +44,9 @@ public class Propietario {
     public List<Vehiculo> getListaVehiculosAsociados() {
         return listaVehiculosAsociados;
     }
-    public i
+    public int getEdad(){
+        return edad;
+    }
 
     
 }

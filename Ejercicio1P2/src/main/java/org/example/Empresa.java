@@ -23,7 +23,17 @@ import java.util.List;
      public void agregarVehiculo(Vehiculo vehiculo) {
          listaVehiculos.add(vehiculo);
      }
+
+    public List<Propietario> getListaPropietarios() {
+        return listaPropietarios;
+    }
+
+    public List<Vehiculo> getListaVehiculos() {
+        return listaVehiculos;
+    }
  
      // Métodos adicionales para las funcionalidades requeridas
+     //Getters 
+     
  }
  

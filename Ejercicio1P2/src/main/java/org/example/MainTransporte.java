@@ -31,22 +31,22 @@ public class MainTransporte {
 
             switch (opcion) {
                 case 1:
-                    crearPropietarioYVehiculoCarga(scanner);
+                    crearPropietarioYVehiculoCarga();
                     break;
                 case 2:
-                    calcularTotalPasajeros(scanner);
+                    calcularTotalPasajeros();
                     break;
                 case 3:
-                    obtenerListaUsuariosPorPeso(scanner);
+                    obtenerListaUsuariosPorPeso();
                     break;
                 case 4:
-                    obtenerNumeroUsuariosPorVehiculo(scanner);
+                    obtenerNumeroUsuariosPorVehiculo();
                     break;
                 case 5:
                     obtenerPropietariosMayoresDe40();
                     break;
                 case 6:
-                    contarUsuariosEnRangoDeEdad(scanner);
+                    contarUsuariosEnRangoDeEdad();
                     break;
                 case 0:
                     System.out.println("Saliendo...");
@@ -58,44 +58,78 @@ public class MainTransporte {
 
         scanner.close();
     }
-    private void crearPropietarioYVehiculoCarga(Scanner scanner) {
-        // Solicitar datos del propietario
+
+    /*
+     * Documentación para crear Propietario y Vehículo de Carga en el menú
+     */
+
+    private void crearPropietarioYVehiculoCarga() {
+
+        Scanner scanner= new Scanner(System.in);
+
+        //Se pide al usuario ingresar datos del Propietario
         System.out.println("Ingrese el nombre del propietario:");
-        String nombrePropietario = scanner.next();
+        String nombre = scanner.nextLine();
+
+        System.out.println("Ingrese la Identificación del propietario");
+        String identificacion=scanner.nextLine();
+
+        System.out.println("Ingrese el email del propietario");
+        String email=scanner.nextLine();
+
+        System.out.println("Ingrese el número de celular del Propietario");
+        String celular=scanner.nextLine();
+
         System.out.println("Ingrese la edad del propietario:");
-        int edadPropietario = scanner.nextInt();
+        int edad = scanner.nextInt();
     
-        // Crear el propietario
-        Propietario propietario = new Propietario(nombrePropietario, nombrePropietario, nombrePropietario, nombrePropietario, edadPropietario){
-        //metodito
-
-        System.out.println("Ingrese la placa del vehículo de carga:");
+        System.out.println("Ingrese placa del vehículo:");
         String placa = scanner.next();
-        System.out.println("Ingrese el modelo del vehículo de carga:");
+
+        System.out.println("Ingrese modelo del vehículo:");
         String modelo = scanner.next();
-        System.out.println("Ingrese la marca del vehículo de carga:");
+
+        System.out.println("Ingrese marca del vehículo:");
         String marca = scanner.next();
-        System.out.println("Ingrese el color del vehículo de carga:");
+
+        System.out.println("Ingrese color del vehículo:");
         String color = scanner.next();
-        System.out.println("Ingrese la capacidad de carga del vehículo de carga (en kg):");
+
+        System.out.println("Ingrese peso del vehículo:");
+        double peso = scanner.nextDouble();
+
+        System.out.println("Ingrese capacidad de carga del vehículo:");
         double capacidadCarga = scanner.nextDouble();
-        System.out.println("Ingrese el número de ejes del vehículo de carga:");
+
+        System.out.println("Ingrese número de ejes del vehículo:");
         int numeroEjes = scanner.nextInt();
-    
+        // creamos Propietario y Vehículo Carga con los datos ya ingresados
+        Propietario propietario = new Propietario(nombre, identificacion, email, celular, edad);
         VehiculoCarga vehiculoCarga = new VehiculoCarga(placa, modelo, marca, color, capacidadCarga, numeroEjes);
-    
 
-        propietario.agregarVehiculo(vehiculoCarga);
-    
-
+        propietario.asociarVehiculo(vehiculoCarga);
         empresa.agregarPropietario(propietario);
-    
-        System.out.println("Propietario y vehículo de carga creados exitosamente.");
+        empresa.agregarVehiculo(vehiculoCarga);
 
+        System.out.println("Propietario y Vehículo de carga creados exitosamente.");
     }
+    /*
+     * Documentación de Scanner para calcular el Total de Pasajeros
+     */
+    private void calcularTotalPasajeros() {
+        Scanner scanner = new Scanner(System.in);
 
-    private void calcularTotalPasajeros(Scanner scanner) {
-        // Implementación para calcular el total de pasajeros transportados
+        System.out.println("Ingrese la placa del vehículo:");
+        String placa = scanner.next();
+
+        int totalPasajeros = 0;
+        for (Vehiculo vehiculo : empresa.getListaVehiculos()) {
+            if (vehiculo instanceof VehiculoTransporte && vehiculo.getPlaca().equals(placa)) {
+                totalPasajeros += ((VehiculoTransporte) vehiculo).getListaPropietariosAsociados().size();
+            }
+        }
+
+        System.out.println("Total de pasajeros transportados por el vehículo con placa " + placa + ": " + totalPasajeros);
     }
 
     private void obtenerListaUsuariosPorPeso(Scanner scanner) {
@@ -114,5 +148,5 @@ public class MainTransporte {
         // Implementación para contar usuarios en un rango de edad
     }
 }
-
+}
 
