@@ -21,7 +21,7 @@ public abstract class Vehiculo {
         this.listaPropietariosAsociados = new ArrayList<>();
     }
 
-    // Getters y setters
+    // Getters
     public List<Propietario> getListaPropietariosAsociados() {
         return listaPropietariosAsociados;
     }

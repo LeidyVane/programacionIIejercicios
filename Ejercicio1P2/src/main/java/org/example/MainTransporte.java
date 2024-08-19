@@ -3,7 +3,8 @@ package org.example;
 import java.util.Scanner;
 
 /* 
- * 
+ * Documentación del Main transporte, se crea un menú interactivo 
+ * y un scanner para cada funcionalidad
  */
 
 public class MainTransporte {
