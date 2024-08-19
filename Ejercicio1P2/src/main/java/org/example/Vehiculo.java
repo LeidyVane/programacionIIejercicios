@@ -17,6 +17,7 @@ public abstract class Vehiculo {
         this.marca = marca;
         this.color = color;
         this.peso = peso;
+        
         this.listaPropietariosAsociados = new ArrayList<>();
     }
 
@@ -24,5 +25,26 @@ public abstract class Vehiculo {
     public List<Propietario> getListaPropietariosAsociados() {
         return listaPropietariosAsociados;
     }
+
+    public String getPlaca() {
+        return placa;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+    
 }
 
