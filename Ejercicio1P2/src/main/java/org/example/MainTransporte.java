@@ -1,10 +1,20 @@
 package org.example;
 
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class MainTransporte {
+
+    private static Empresa empresa;
+    private static Scanner scanner;
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        empresa= new Empresa ("Movilidad SA");
+        inicializarDatos();
+        scanner = new Scanner(System.in);
+        mostrarMenu();
 
         /*
          * se crea un Propietario con sus datos personales
@@ -66,5 +76,11 @@ public class MainTransporte {
 
         System.out.println("Total de pasajeros transportados por el vehículo con placa " + placaBusqueda + ": " + pasajerosTransportados);
     }
-}//holaaa
+
+    /*
+    /* Se crea método para mostrar el Menú y manejar opciones
+     */
+    
+
+}
 
