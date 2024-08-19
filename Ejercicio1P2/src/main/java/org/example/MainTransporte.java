@@ -67,7 +67,7 @@ public class MainTransporte {
     
         // Crear el propietario
         Propietario propietario = new Propietario(nombrePropietario, nombrePropietario, nombrePropietario, nombrePropietario, edadPropietario){
-
+        //metodito
 
         System.out.println("Ingrese la placa del vehículo de carga:");
         String placa = scanner.next();
