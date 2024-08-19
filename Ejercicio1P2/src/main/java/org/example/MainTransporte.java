@@ -132,13 +132,43 @@ public class MainTransporte {
 
         System.out.println("Total de pasajeros transportados por el vehículo con placa " + placa + ": " + totalPasajeros);
     }
+    /*
+     * Documentación de scanner para obtener la lista de usuarios que superan un peso
+     */
 
     private void obtenerListaUsuariosPorPeso() {
-        // Implementación para obtener la lista de usuarios que superan un peso
-    }
+        Scanner scanner= new Scanner(System.in);
 
-    private void obtenerNumeroUsuariosPorVehiculo() {
-        // Implementación para obtener el número de usuarios movilizados en un vehículo
+        //pedimos al usuario que ingrese el valor del peso para poder obtener 
+        //la lista de vehículos que superen ese peso
+        System.out.println("Ingrese el peso:");
+        double peso=scanner.nextDouble();
+
+        for(Vehiculo vehiculo: empresa.getListaVehiculos()){
+            if(vehiculo.getPeso() > peso){
+                System.out.println("Placa: " + vehiculo.getPlaca() + ", Peso: " + vehiculo.getPeso());
+            }
+        }
+    }
+    /*
+     * Documentación de scanner para obtener un número de usuarios que se movilizaron 
+     * en dicho vehículo sólo conociendo su placa
+     */
+
+     private void obtenerNumeroUsuariosPorVehiculo() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingrese la placa del vehículo:");
+        String placa = scanner.next();
+
+        int numeroPropietarios = 0;
+        for (Vehiculo vehiculo : empresa.getListaVehiculos()) {
+            if (vehiculo.getPlaca().equals(placa)) {
+                numeroPropietarios = vehiculo.getListaPropietariosAsociados().size();
+            }
+        }
+
+        System.out.println("Número de propietarios asociados al vehículo con placa " + placa + ": " + numeroPropietarios);
     }
 
     private void obtenerPropietariosMayoresDe40() {
