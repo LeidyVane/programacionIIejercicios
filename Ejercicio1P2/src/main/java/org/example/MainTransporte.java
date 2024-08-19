@@ -48,7 +48,7 @@ public class MainTransporte {
          * Calculamos el total de pasajeros transportados en un día
          */
         VehiculoTransporte vehiculo1 = new VehiculoTransporte("Ck456", "2020", "Toyota", "Blanco", 50);
-        VehiculoTransporte vehiculo2 = new VehiculoTransporte("XT67", "2019", "Nissan", "Negro", 45);
+        VehiculoTransporte vehiculo2 = new VehiculoTransporte("XT67", "2019", "BMW", "Negro", 45);
         VehiculoTransporte vehiculo3 = new VehiculoTransporte("LG49", "2021", "Ford", "Azul", 60);
 
         System.out.println("\nIngrese la placa del vehículo de pasajeros para calcular el total de pasajeros transportados:");
