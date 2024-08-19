@@ -104,6 +104,7 @@ public class MainTransporte {
 
         System.out.println("Ingrese número de ejes del vehículo:");
         int numeroEjes = scanner.nextInt();
+        
         // creamos Propietario y Vehículo Carga con los datos ya ingresados
         Propietario propietario = new Propietario(nombre, identificacion, email, celular, edad);
         VehiculoCarga vehiculoCarga = new VehiculoCarga(placa, modelo, marca, color, capacidadCarga, numeroEjes, peso);
@@ -115,7 +116,7 @@ public class MainTransporte {
         System.out.println("Propietario y Vehículo de carga creados exitosamente.");
     }
     /*
-     * Documentación de Scanner para calcular el Total de Pasajeros
+     * Documentación de método para calcular el Total de Pasajeros e imprimir en consola
      */
     private void calcularTotalPasajeros() {
         Scanner scanner = new Scanner(System.in);
@@ -133,7 +134,7 @@ public class MainTransporte {
         System.out.println("Total de pasajeros transportados por el vehículo con placa " + placa + ": " + totalPasajeros);
     }
     /*
-     * Documentación de scanner para obtener la lista de usuarios que superan un peso
+     * Documentación de método para obtener la lista de usuarios que superan un peso e imprimir en consola
      */
 
     private void obtenerListaUsuariosPorPeso() {
@@ -151,8 +152,8 @@ public class MainTransporte {
         }
     }
     /*
-     * Documentación de scanner para obtener un número de usuarios que se movilizaron 
-     * en dicho vehículo sólo conociendo su placa
+     * Documentación de método para obtener un número de usuarios que se movilizaron 
+     * en dicho vehículo sólo conociendo su placa e imprimir en consola
      */
 
      private void obtenerNumeroUsuariosPorVehiculo() {
@@ -170,11 +171,15 @@ public class MainTransporte {
 
         System.out.println("Número de propietarios asociados al vehículo con placa " + placa + ": " + numeroPropietarios);
     }
-
+    /*
+     * Documentación de método para obtener una lista de propietarios mayores de 40 años e imprimir en consola
+     */
     private void obtenerPropietariosMayoresDe40() {
-        // Implementación para obtener el número de propietarios mayores de 40 años
-    }
 
+    }
+    /*
+     * Dumentación de método para contar usuarios en un rango de edad e imprimir en consola
+     */
     private void contarUsuariosEnRangoDeEdad() {
         // Implementación para contar usuarios en un rango de edad
     }
