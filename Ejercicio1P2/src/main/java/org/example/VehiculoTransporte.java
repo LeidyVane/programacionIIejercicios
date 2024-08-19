@@ -20,3 +20,4 @@ public class VehiculoTransporte extends Vehiculo {
         return super.toString() + ", Máximo de pasajeros: " + maxPasajeros;
     }
 }
+//prueba commit 2
