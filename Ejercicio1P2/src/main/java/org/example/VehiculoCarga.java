@@ -10,17 +10,5 @@ public class VehiculoCarga extends Vehiculo {
         this.numeroEjes = numeroEjes;
     }
 
-    public double getCapacidadCarga() {
-        return capacidadCarga;
-    }
-
-    public int getNumeroEjes() {
-        return numeroEjes;
-    }
-
-    @Override
-    public String toString() {
-        return super.toString() + ", Capacidad de carga: " + capacidadCarga + " toneladas, Número de ejes: " + numeroEjes;
-    }
+    // Getters y setters
 }
-
