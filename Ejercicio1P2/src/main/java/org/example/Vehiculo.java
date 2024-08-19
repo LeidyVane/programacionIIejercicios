@@ -11,13 +11,13 @@ public abstract class Vehiculo {
     private double peso;
     private List<Propietario> listaPropietariosAsociados;
 
-    public Vehiculo(String placa, String modelo, String marca, String color) {
+    public Vehiculo(String placa, String modelo, String marca, String color, double peso) {
         this.placa = placa;
         this.modelo = modelo;
         this.marca = marca;
         this.color = color;
-        this.peso = peso;
-        
+        this.peso=peso;
+
         this.listaPropietariosAsociados = new ArrayList<>();
     }
 

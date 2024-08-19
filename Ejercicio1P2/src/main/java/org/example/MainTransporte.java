@@ -105,7 +105,7 @@ public class MainTransporte {
         int numeroEjes = scanner.nextInt();
         // creamos Propietario y Vehículo Carga con los datos ya ingresados
         Propietario propietario = new Propietario(nombre, identificacion, email, celular, edad);
-        VehiculoCarga vehiculoCarga = new VehiculoCarga(placa, modelo, marca, color, capacidadCarga, numeroEjes);
+        VehiculoCarga vehiculoCarga = new VehiculoCarga(placa, modelo, marca, color, capacidadCarga, numeroEjes, peso);
 
         propietario.asociarVehiculo(vehiculoCarga);
         empresa.agregarPropietario(propietario);
