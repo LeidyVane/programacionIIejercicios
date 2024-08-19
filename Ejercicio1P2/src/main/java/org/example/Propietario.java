@@ -19,7 +19,7 @@ public class Propietario {
         this.listaVehiculosAsociados = new ArrayList<>();
         this.edad=edad;
     }
-// Getters y setters
+
     public void asociarVehiculo(Vehiculo vehiculo) {
         listaVehiculosAsociados.add(vehiculo);
         vehiculo.getListaPropietariosAsociados().add(this);
@@ -44,7 +44,6 @@ public class Propietario {
     public List<Vehiculo> getListaVehiculosAsociados() {
         return listaVehiculosAsociados;
     }
-    public i
 
     
 }
