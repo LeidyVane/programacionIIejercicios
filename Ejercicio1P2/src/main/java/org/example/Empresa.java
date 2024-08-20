@@ -8,12 +8,14 @@ import java.util.List;
  */
  
  public class Empresa {
+    private String nombre;
      private List<Propietario> listaPropietarios;
      private List<Vehiculo> listaVehiculos;
  
-     public Empresa() {
+     public Empresa(String nombre) {
          this.listaPropietarios = new ArrayList<>();
          this.listaVehiculos = new ArrayList<>();
+         this.nombre=nombre;
      }
  
      public void agregarPropietario(Propietario propietario) {
@@ -31,9 +33,11 @@ import java.util.List;
     public List<Vehiculo> getListaVehiculos() {
         return listaVehiculos;
     }
- 
-     // Métodos adicionales para las funcionalidades requeridas
-     //Getters 
+
+    //Getters
+    public String getNombre() {
+        return nombre;
+    }
      
  }
  
