@@ -41,6 +41,10 @@ public class Propietario {
         return celular;
     }
 
+    public int getEdad() {
+        return edad;
+    }
+    
     public List<Vehiculo> getListaVehiculosAsociados() {
         return listaVehiculosAsociados;
     }
