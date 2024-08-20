@@ -130,18 +130,41 @@ public class MainTransporte {
     private void calcularTotalPasajeros() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Ingrese la placa del vehículo:");
-        String placa = scanner.next();
+    // Simulamos tres vehículos de transporte operando en un día
+    VehiculoTransporte vehiculo1 = new VehiculoTransporte("ABC123", "2019", "Toyota", "blanco", 15, 1600 );
+    VehiculoTransporte vehiculo2 = new VehiculoTransporte("HYU78", "2015", "Toyota", "negro", 10, 1400 );
+    VehiculoTransporte vehiculo3 = new VehiculoTransporte("ABC123", "2021", "Toyota", "rojo", 8, 1200 );
 
-        int totalPasajeros = 0;
-        for (Vehiculo vehiculo : empresa.getListaVehiculos()) {
-            if (vehiculo instanceof VehiculoTransporte && vehiculo.getPlaca().equals(placa)) {
-                totalPasajeros += ((VehiculoTransporte) vehiculo).getListaPropietariosAsociados().size();
-            }
+    // Agregamos los vehículos a la lista de la empresa
+    empresa.getListaVehiculos().add(vehiculo1);
+    empresa.getListaVehiculos().add(vehiculo2);
+    empresa.getListaVehiculos().add(vehiculo3);
+
+    // Asignamos un número de pasajeros transportados en un día a cada vehículo
+    vehiculo1.setPasajerosTransportados(200); // Este valor podría ser dinámico
+    vehiculo2.setPasajerosTransportados(150);
+    vehiculo3.setPasajerosTransportados(180);
+
+    // Solicitar la placa al usuario
+    System.out.println("Ingrese la placa del vehículo:");
+    String placa = scanner.next();
+
+    // Buscar el vehículo por la placa
+    VehiculoTransporte vehiculoEncontrado = null;
+    for (Vehiculo vehiculo : empresa.getListaVehiculos()) {
+        if (vehiculo.getPlaca().equals(placa) && vehiculo instanceof VehiculoTransporte) {
+            vehiculoEncontrado = (VehiculoTransporte) vehiculo;
+            break;
         }
-
-        System.out.println("Total de pasajeros transportados por el vehículo con placa " + placa + ": " + totalPasajeros);
     }
+
+    // Mostrar el número de pasajeros transportados
+    if (vehiculoEncontrado != null) {
+        System.out.println("Total de pasajeros transportados por el vehículo con placa " + placa + ": " + vehiculoEncontrado.getPasajerosTransportados());
+    } else {
+        System.out.println("Vehículo no encontrado o no es un vehículo de transporte.");
+    }
+}
 
     /**
      * Método para obtener la lista de usuarios que superan un peso e imprimir en consola
