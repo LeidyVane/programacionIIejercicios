@@ -178,7 +178,6 @@ public class MainTransporte {
         Scanner scanner= new Scanner(System.in);
 
         System.out.println("Ingrese la edad del propietario:");
-        int edad = scanner.nextInt();
 
         int propietariosMayoresDe40 = 0;
         for (Propietario propietario : empresa.getListaPropietarios()) {
@@ -194,7 +193,22 @@ public class MainTransporte {
      * Dumentación de método para contar usuarios en un rango de edad e imprimir en consola
      */
     private void contarUsuariosEnRangoDeEdad() {
-        // Implementación para contar usuarios en un rango de edad
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingrese el límite menor del rango de edad:");
+        int edadMenor = scanner.nextInt();
+
+        System.out.println("Ingrese el límite mayor del rango de  edad:");
+        int edadMayor = scanner.nextInt();
+
+        int usuarios = 0;
+        for (Propietario propietario: empresa.getListaPropietarios()) {
+            if (propietario.getEdad() >= edadMenor && propietario.getEdad() <=edadMayor) {
+                usuarios++;
+            }
+        }
+        
+        System.out.println("Número de usuarios en el rango de edad" + edadMenor + "-" + edadMayor + ": " + usuarios);
     }
 }
 
