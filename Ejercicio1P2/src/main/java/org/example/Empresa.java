@@ -12,6 +12,11 @@ import java.util.List;
      private List<Propietario> listaPropietarios;
      private List<Vehiculo> listaVehiculos;
  
+     /**
+      * Método constructor de la clase Empresa
+      *
+      * @param nombre
+      */
      public Empresa(String nombre) {
          this.listaPropietarios = new ArrayList<>();
          this.listaVehiculos = new ArrayList<>();
@@ -26,15 +31,29 @@ import java.util.List;
          listaVehiculos.add(vehiculo);
      }
 
+     /**
+      * Método para obtener una lista de propietarios
+      *
+      * @return
+      */
     public List<Propietario> getListaPropietarios() {
         return listaPropietarios;
     }
 
+    /**
+     * Método para obtener una lista de vehiculos
+     * 
+     * @return
+     */
     public List<Vehiculo> getListaVehiculos() {
         return listaVehiculos;
     }
 
-    //Getters
+    /**
+     * Método para obtener el nombre de la empresa
+     * 
+     * @return
+     */
     public String getNombre() {
         return nombre;
     }

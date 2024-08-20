@@ -10,6 +10,11 @@ public class Main {
         menu.mostrarMenu();
     }
 
+    /**
+     * Método para inicializar datos de la Empresa
+     * 
+     * @param empresa
+     */
     public static void inicializarDatos(Empresa empresa) {
         // Crear propietarios, vehículos y asociarlos
         Propietario propietario1 = new Propietario("Juan Pérez", "12345678", "juan@example.com", "555-1234", 45);

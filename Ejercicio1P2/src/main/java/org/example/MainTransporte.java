@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-/* 
+/**
  * Documentación del Main transporte, se crea un menú interactivo 
  * y un scanner para cada funcionalidad
  */
@@ -10,10 +10,18 @@ import java.util.Scanner;
 public class MainTransporte {
     private Empresa empresa; 
 
+    /**
+     * Método constructor de la clase MainTransporte
+     * 
+     * @param empresa
+     */
     public MainTransporte(Empresa empresa) {
         this.empresa = empresa;
     }
 
+    /**
+     *Menú interactivo que realiza diferentes funciones sobre los propietarios y vehiculos
+     */
     public void mostrarMenu() {
         Scanner scanner = new Scanner(System.in);
         int opcion;
@@ -61,7 +69,7 @@ public class MainTransporte {
     }
 
     /*
-     * Documentación para crear Propietario y Vehículo de Carga en el menú
+     * Documentación para crear Propietario y Vehículo de Carga en el menú y los asocia a la empresa
      */
 
     private void crearPropietarioYVehiculoCarga() {
@@ -115,8 +123,9 @@ public class MainTransporte {
 
         System.out.println("Propietario y Vehículo de carga creados exitosamente.");
     }
-    /*
-     * Documentación de método para calcular el Total de Pasajeros e imprimir en consola
+
+    /**
+     * Método para calcular el total de pasajeros e imprimir en consola
      */
     private void calcularTotalPasajeros() {
         Scanner scanner = new Scanner(System.in);
@@ -133,10 +142,10 @@ public class MainTransporte {
 
         System.out.println("Total de pasajeros transportados por el vehículo con placa " + placa + ": " + totalPasajeros);
     }
-    /*
-     * Documentación de método para obtener la lista de usuarios que superan un peso e imprimir en consola
-     */
 
+    /**
+     * Método para obtener la lista de usuarios que superan un peso e imprimir en consola
+     */
     private void obtenerListaUsuariosPorPeso() {
         Scanner scanner= new Scanner(System.in);
 
@@ -151,11 +160,11 @@ public class MainTransporte {
             }
         }
     }
-    /*
-     * Documentación de método para obtener un número de usuarios que se movilizaron 
+
+    /**
+     * Método para obtener un número de usuarios que se movilizaron 
      * en dicho vehículo sólo conociendo su placa e imprimir en consola
      */
-
      private void obtenerNumeroUsuariosPorVehiculo() {
         Scanner scanner = new Scanner(System.in);
 
@@ -171,8 +180,9 @@ public class MainTransporte {
 
         System.out.println("Número de propietarios asociados al vehículo con placa " + placa + ": " + numeroPropietarios);
     }
-    /*
-     * Documentación de método para obtener una lista de propietarios mayores de 40 años e imprimir en consola
+
+    /**
+     * Método para obtener una lista de propietarios mayores de 40 años e imprimir en consola
      */
     private void obtenerPropietariosMayoresDe40() {
         Scanner scanner= new Scanner(System.in);
@@ -189,8 +199,8 @@ public class MainTransporte {
         System.out.println("Número de propietarios mayores de 40 años:" + propietariosMayoresDe40);
 
     }
-    /*
-     * Dumentación de método para contar usuarios en un rango de edad e imprimir en consola
+    /**
+     * Método para contar usuarios en un rango de edad e imprimir en consola
      */
     private void contarUsuariosEnRangoDeEdad() {
         Scanner scanner = new Scanner(System.in);
