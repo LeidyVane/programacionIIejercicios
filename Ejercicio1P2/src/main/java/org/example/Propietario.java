@@ -10,7 +10,6 @@ public class Propietario {
     private String celular;
     private List<Vehiculo> listaVehiculosAsociados;
     private int edad;
-
     /**
      * Método constructor de la clase Propietario
      * 

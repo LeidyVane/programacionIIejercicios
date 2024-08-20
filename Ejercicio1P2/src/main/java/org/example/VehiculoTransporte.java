@@ -3,6 +3,7 @@ package org.example;
 
 public class VehiculoTransporte extends Vehiculo {
     private int maxPasajeros;
+    private int pasajerosTransportados;
 
     /**
      * Método constructor de la clase VehiculoTransporte
@@ -16,6 +17,7 @@ public class VehiculoTransporte extends Vehiculo {
     public VehiculoTransporte(String placa, String modelo, String marca, String color, int maxPasajeros, double peso) {
         super(placa, modelo, marca, color, peso);
         this.maxPasajeros = maxPasajeros;
+        this.pasajerosTransportados = 0;
     }
     
     /**
@@ -27,6 +29,13 @@ public class VehiculoTransporte extends Vehiculo {
         return maxPasajeros;
     }
 
+    public int getPasajerosTransportados() {
+        return pasajerosTransportados;
+    }
+
+    public void setPasajerosTransportados(int pasajerosTransportados) {
+        this.pasajerosTransportados = pasajerosTransportados;
+    }
 
 
 }
