@@ -24,6 +24,5 @@ public class Main {
         empresa.agregarPropietario(propietario1);
         empresa.agregarVehiculo(vehiculo1);
 
-        // Más inicializaciones según sea necesario
     }
 }

@@ -216,6 +216,7 @@ public class MainTransporte {
                 propietariosMayoresDe40++;
             }
         }
+
         System.out.println("Número de propietarios mayores de 40 años: " + propietariosMayoresDe40);
     }
     
