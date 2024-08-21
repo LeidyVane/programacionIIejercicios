@@ -17,8 +17,8 @@ public class Main {
      */
     public static void inicializarDatos(Empresa empresa) {
         // Crear propietarios, vehículos y asociarlos
-        Propietario propietario1 = new Propietario("Juan Pérez", "12345678", "juan@example.com", "555-1234", 45);
-        VehiculoCarga vehiculo1 = new VehiculoCarga("ABC123", "ModeloX", "MarcaY", "Rojo", 1500.0, 2,3);
+        Propietario propietario1 = new Propietario("Pepito Perez", "123", "pepe@gmail.com", "45674", 18);
+        VehiculoCarga vehiculo1 = new VehiculoCarga("GPL124", "2019", "toyota", "Rojo", 1500, 2,3);
         propietario1.asociarVehiculo(vehiculo1);
 
         empresa.agregarPropietario(propietario1);
