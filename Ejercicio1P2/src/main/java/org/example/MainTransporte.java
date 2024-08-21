@@ -209,20 +209,16 @@ public class MainTransporte {
      * Método para obtener una lista de propietarios mayores de 40 años e imprimir en consola
      */
     private void obtenerPropietariosMayoresDe40() {
-        Scanner scanner= new Scanner(System.in);
+        int propietariosMayoresDe40 = 0; 
 
-        System.out.println("Ingrese la edad del propietario:");
-
-        int propietariosMayoresDe40 = 0;
         for (Propietario propietario : empresa.getListaPropietarios()) {
             if (propietario.getEdad() > 40) {
                 propietariosMayoresDe40++;
-             }
+            }
         }
-
-        System.out.println("Número de propietarios mayores de 40 años:" + propietariosMayoresDe40);
-
+        System.out.println("Número de propietarios mayores de 40 años: " + propietariosMayoresDe40);
     }
+    
     /**
      * Método para contar usuarios en un rango de edad e imprimir en consola
      */
